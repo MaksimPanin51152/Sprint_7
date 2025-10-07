@@ -2,13 +2,14 @@ package ru.yandex.praktikum.sprint7;
 
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
+import ru.yandex.praktikum.sprint7.BaseClient;
 
 public class OrderClient extends BaseClient {
 
-    private static final String ORDER_PATH = "/api/v1/orders/";
+    private static final String ORDER_PATH = "/api/v1/orders";
 
     @Step("Создание заказа")
-    public Response createOrder(Order order) {
+    public Response createOrder(Object order) {
         return post(ORDER_PATH, order);
     }
 
@@ -17,8 +18,11 @@ public class OrderClient extends BaseClient {
         return get(ORDER_PATH);
     }
 
-    @Step("Принятие заказа с id = {orderId}")
-    public Response acceptOrder(int orderId, int courierId) {
-        return put(ORDER_PATH + "accept/" + orderId + "?courierId=" + courierId, null);
+    @Step("Отмена заказа с track = {track}")
+    public Response cancelOrder(int track) {
+        String body = "{ \"track\": " + track + " }";
+        return put(ORDER_PATH + "/cancel", body);
     }
 }
+
+

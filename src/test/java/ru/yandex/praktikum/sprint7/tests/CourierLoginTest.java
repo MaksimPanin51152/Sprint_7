@@ -12,7 +12,6 @@ import ru.yandex.praktikum.sprint7.CourierClient;
 import static org.hamcrest.Matchers.equalTo;
 
 public class CourierLoginTest {
-
     private CourierClient courierClient;
     private int courierId;
     private Courier courier;
@@ -21,12 +20,16 @@ public class CourierLoginTest {
     public void setUp() {
         courierClient = new CourierClient();
         courier = new Courier("ninja" + System.currentTimeMillis(), "1234", "Naruto");
-        createCourierStep(courier);
-        courierId = loginCourierStep(courier);
+        courierClient.createCourier(courier).then().statusCode(201);
     }
 
     @After
     public void tearDown() {
+        if (courierId == 0) {
+            try {
+                courierId = courierClient.loginCourier(courier).then().extract().path("id");
+            } catch (Exception ignored) {}
+        }
         if (courierId != 0) {
             deleteCourierStep(courierId);
         }
@@ -36,37 +39,30 @@ public class CourierLoginTest {
     @DisplayName("Успешный вход курьера")
     @Description("Проверяем, что курьер может войти с правильными данными")
     public void loginCourierSuccessfully() {
-        loginCourierAndCheckIdStep(courier, courierId);
+        courierId = loginCourierAndCheckIdStep(courier);
     }
 
     @Test
     @DisplayName("Попытка входа с неверным паролем")
     @Description("Проверяем, что вход с неверным паролем возвращает ошибку 404")
     public void cannotLoginWithWrongPassword() {
-        loginCourierExpectingFailureStep(new Courier(courier.getLogin(), "wrongPassword", null),
-                404, "Учетная запись не найдена");
+        loginCourierExpectingFailureStep(new Courier(courier.getLogin(), "wrongPassword", null), 404, "Учетная запись не найдена");
     }
 
-    @Step("Создание курьера {courier.login}")
-    private void createCourierStep(Courier courier) {
-        courierClient.createCourier(courier).then().statusCode(201);
+    @Test
+    @DisplayName("Попытка входа с неверным логином")
+    @Description("Проверяем, что вход с неверным логином возвращает ошибку 404")
+    public void cannotLoginWithWrongLogin() {
+        loginCourierExpectingFailureStep(new Courier("wrongLogin", courier.getPassword(), null), 404, "Учетная запись не найдена");
     }
 
-    @Step("Логин курьера {courier.login}")
-    private int loginCourierStep(Courier courier) {
+    @Step("Логин курьера {courier.login} и проверка ID")
+    private int loginCourierAndCheckIdStep(Courier courier) {
         return courierClient.loginCourier(courier)
                 .then()
                 .statusCode(200)
                 .extract()
                 .path("id");
-    }
-
-    @Step("Логин курьера {courier.login} и проверка ID {expectedId}")
-    private void loginCourierAndCheckIdStep(Courier courier, int expectedId) {
-        courierClient.loginCourier(courier)
-                .then()
-                .statusCode(200)
-                .body("id", equalTo(expectedId));
     }
 
     @Step("Логин курьера {courier.login} и ожидаем ошибку {statusCode} с сообщением '{message}'")

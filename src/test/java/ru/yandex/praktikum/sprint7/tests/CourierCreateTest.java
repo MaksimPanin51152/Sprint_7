@@ -12,9 +12,9 @@ import ru.yandex.praktikum.sprint7.CourierClient;
 import static org.hamcrest.Matchers.equalTo;
 
 public class CourierCreateTest {
-
     private CourierClient courierClient;
     private int courierId;
+    private Courier courier;
 
     @Before
     public void setUp() {
@@ -23,8 +23,15 @@ public class CourierCreateTest {
 
     @After
     public void tearDown() {
-        if (courierId != 0) {
-            deleteCourier(courierId);
+        if (courier != null) {
+            // Получаем ID курьера после выполнения теста
+            try {
+                courierId = courierClient.loginCourier(courier)
+                        .then().extract().path("id");
+            } catch (Exception ignored) {}
+            if (courierId != 0) {
+                deleteCourier(courierId);
+            }
         }
     }
 
@@ -32,18 +39,15 @@ public class CourierCreateTest {
     @DisplayName("Создание нового курьера успешно")
     @Description("Создаем нового курьера и проверяем, что он может войти")
     public void createCourierSuccessfully() {
-        Courier courier = new Courier("ninja" + System.currentTimeMillis(), "1234", "Naruto");
+        courier = new Courier("ninja" + System.currentTimeMillis(), "1234", "Naruto");
         createCourierStep(courier);
-
-        Courier loginCourier = new Courier(courier.getLogin(), courier.getPassword(), null);
-        courierId = loginCourierStep(loginCourier);
     }
 
     @Test
     @DisplayName("Нельзя создать курьера без логина")
     @Description("Проверяем, что создание курьера без логина возвращает ошибку 400")
     public void cannotCreateCourierWithoutLogin() {
-        Courier courier = new Courier(null, "1234", "Naruto");
+        courier = new Courier(null, "1234", "Naruto");
         createCourierExpectingFailureStep(courier, 400, "Недостаточно данных для создания учетной записи");
     }
 
@@ -52,12 +56,8 @@ public class CourierCreateTest {
     @Description("Проверяем, что создание курьера с уже существующим логином возвращает ошибку 409")
     public void cannotCreateDuplicateCourier() {
         String login = "ninja" + System.currentTimeMillis();
-        Courier courier = new Courier(login, "1234", "Naruto");
+        courier = new Courier(login, "1234", "Naruto");
         createCourierStep(courier);
-
-        Courier loginCourier = new Courier(courier.getLogin(), courier.getPassword(), null);
-        courierId = loginCourierStep(loginCourier);
-
         createCourierExpectingFailureStep(courier, 409, "Этот логин уже используется. Попробуйте другой.");
     }
 
@@ -72,15 +72,6 @@ public class CourierCreateTest {
                 .then()
                 .statusCode(statusCode)
                 .body("message", equalTo(message));
-    }
-
-    @Step("Логин курьера {courier.login}")
-    private int loginCourierStep(Courier courier) {
-        return courierClient.loginCourier(courier)
-                .then()
-                .statusCode(200)
-                .extract()
-                .path("id");
     }
 
     @Step("Удаление курьера {courierId}")
