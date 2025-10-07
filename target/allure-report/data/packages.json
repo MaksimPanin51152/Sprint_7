@@ -1,0 +1,141 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "ru.yandex.praktikum.sprint7.tests",
+    "children" : [ {
+      "name" : "cannotCreateCourierWithoutLogin",
+      "uid" : "f663d5eb330b84ba",
+      "parentUid" : "75ce75b4d909c0f53b6f59dfec78ffe5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1759861830797,
+        "stop" : 1759861833299,
+        "duration" : 2502
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "cannotCreateDuplicateCourier",
+      "uid" : "84112b3e06fc5bfe",
+      "parentUid" : "75ce75b4d909c0f53b6f59dfec78ffe5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1759861833346,
+        "stop" : 1759861834675,
+        "duration" : 1329
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "createCourierSuccessfully",
+      "uid" : "786de501b1e81fcc",
+      "parentUid" : "75ce75b4d909c0f53b6f59dfec78ffe5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1759861834679,
+        "stop" : 1759861835520,
+        "duration" : 841
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "cannotLoginWithWrongLogin",
+      "uid" : "3e972853d3e6d7f0",
+      "parentUid" : "75ce75b4d909c0f53b6f59dfec78ffe5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1759861835525,
+        "stop" : 1759861836680,
+        "duration" : 1155
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "loginCourierSuccessfully",
+      "uid" : "69ecbffb300ef11d",
+      "parentUid" : "75ce75b4d909c0f53b6f59dfec78ffe5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1759861836683,
+        "stop" : 1759861837552,
+        "duration" : 869
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "cannotLoginWithWrongPassword",
+      "uid" : "1d561f2e4a380f6a",
+      "parentUid" : "75ce75b4d909c0f53b6f59dfec78ffe5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1759861837554,
+        "stop" : 1759861838666,
+        "duration" : 1112
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "createOrderWithColors[Цвета заказа: [Ljava.lang.String;@39e53bef]",
+      "uid" : "ddf7e2a80708092a",
+      "parentUid" : "75ce75b4d909c0f53b6f59dfec78ffe5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1759861838681,
+        "stop" : 1759861839306,
+        "duration" : 625
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "createOrderWithColors[Цвета заказа: [Ljava.lang.String;@5c313224]",
+      "uid" : "3870c6fda3779638",
+      "parentUid" : "75ce75b4d909c0f53b6f59dfec78ffe5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1759861839310,
+        "stop" : 1759861839881,
+        "duration" : 571
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "createOrderWithColors[Цвета заказа: [Ljava.lang.String;@1e1e837d]",
+      "uid" : "51d997229a717190",
+      "parentUid" : "75ce75b4d909c0f53b6f59dfec78ffe5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1759861839883,
+        "stop" : 1759861840455,
+        "duration" : 572
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "createOrderWithColors[Цвета заказа: null]",
+      "uid" : "797688ef227bf139",
+      "parentUid" : "75ce75b4d909c0f53b6f59dfec78ffe5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1759861840457,
+        "stop" : 1759861841032,
+        "duration" : 575
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "getOrdersListSuccessfully",
+      "uid" : "22eee3527ae74537",
+      "parentUid" : "75ce75b4d909c0f53b6f59dfec78ffe5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1759861841035,
+        "stop" : 1759861848484,
+        "duration" : 7449
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "ru.yandex.praktikum.sprint7.tests"
+  } ]
+}

@@ -1,0 +1,57 @@
+{
+  "uid" : "f663d5eb330b84ba",
+  "name" : "Нельзя создать курьера без логина",
+  "fullName" : "ru.yandex.praktikum.sprint7.tests.CourierCreateTest.cannotCreateCourierWithoutLogin",
+  "historyId" : "66c3961d42da7fd0df20259e9b7aca5a",
+  "time" : {
+    "start" : 1759861830797,
+    "stop" : 1759861833299,
+    "duration" : 2502
+  },
+  "description" : "Проверяем, что создание курьера без логина возвращает ошибку 400",
+  "descriptionHtml" : "<p>Проверяем, что создание курьера без логина возвращает ошибку 400</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "ru.yandex.praktikum.sprint7.tests"
+  }, {
+    "name" : "testClass",
+    "value" : "ru.yandex.praktikum.sprint7.tests.CourierCreateTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "cannotCreateCourierWithoutLogin"
+  }, {
+    "name" : "suite",
+    "value" : "ru.yandex.praktikum.sprint7.tests.CourierCreateTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-I5I9LF6"
+  }, {
+    "name" : "thread",
+    "value" : "19060@DESKTOP-I5I9LF6.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f663d5eb330b84ba.json",
+  "parameterValues" : [ ]
+}
