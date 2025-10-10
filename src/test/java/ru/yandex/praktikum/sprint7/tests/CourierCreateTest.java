@@ -52,6 +52,14 @@ public class CourierCreateTest {
     }
 
     @Test
+    @DisplayName("Нельзя создать курьера без пароля")
+    @Description("Проверяем, что создание курьера без пароля возвращает ошибку 400")
+    public void cannotCreateCourierWithoutPassword() {
+        courier = new Courier("ninja" + System.currentTimeMillis(), null, "Naruto");
+        createCourierExpectingFailureStep(courier, 400, "Недостаточно данных для создания учетной записи");
+    }
+
+    @Test
     @DisplayName("Нельзя создать курьера с уже существующим логином")
     @Description("Проверяем, что создание курьера с уже существующим логином возвращает ошибку 409")
     public void cannotCreateDuplicateCourier() {

@@ -56,6 +56,22 @@ public class CourierLoginTest {
         loginCourierExpectingFailureStep(new Courier("wrongLogin", courier.getPassword(), null), 404, "Учетная запись не найдена");
     }
 
+    @Test
+    @DisplayName("Попытка входа без логина")
+    @Description("Проверяем, что вход без логина возвращает ошибку 400")
+    public void cannotLoginWithoutLogin() {
+        Courier courierWithoutLogin = new Courier(null, courier.getPassword(), null);
+        loginCourierExpectingFailureStep(courierWithoutLogin, 400, "Недостаточно данных для входа");
+    }
+
+    @Test
+    @DisplayName("Попытка входа без пароля")
+    @Description("Проверяем, что вход без пароля возвращает ошибку 400")
+    public void cannotLoginWithoutPassword() {
+        Courier courierWithoutPassword = new Courier(courier.getLogin(), null, null);
+        loginCourierExpectingFailureStep(courierWithoutPassword, 400, "Недостаточно данных для входа");
+    }
+
     @Step("Логин курьера {courier.login} и проверка ID")
     private int loginCourierAndCheckIdStep(Courier courier) {
         return courierClient.loginCourier(courier)
