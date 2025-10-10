@@ -1,0 +1,57 @@
+{
+  "uid" : "51d997229a717190",
+  "name" : "createOrderWithColors[Цвета заказа: [Ljava.lang.String;@1e1e837d]",
+  "fullName" : "ru.yandex.praktikum.sprint7.tests.CreateOrderTest.createOrderWithColors[Цвета заказа: [Ljava.lang.String;@1e1e837d]",
+  "historyId" : "be8bed3722a28d1e80f5d62334f7b3b",
+  "time" : {
+    "start" : 1759861839883,
+    "stop" : 1759861840455,
+    "duration" : 572
+  },
+  "description" : "Создание заказа с цветами",
+  "descriptionHtml" : "<p>Создание заказа с цветами</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "ru.yandex.praktikum.sprint7.tests"
+  }, {
+    "name" : "testClass",
+    "value" : "ru.yandex.praktikum.sprint7.tests.CreateOrderTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "createOrderWithColors[Цвета заказа: [Ljava.lang.String;@1e1e837d]"
+  }, {
+    "name" : "suite",
+    "value" : "ru.yandex.praktikum.sprint7.tests.CreateOrderTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-I5I9LF6"
+  }, {
+    "name" : "thread",
+    "value" : "19060@DESKTOP-I5I9LF6.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "51d997229a717190.json",
+  "parameterValues" : [ ]
+}

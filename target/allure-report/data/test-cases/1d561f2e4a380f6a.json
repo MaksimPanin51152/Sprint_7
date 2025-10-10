@@ -1,0 +1,57 @@
+{
+  "uid" : "1d561f2e4a380f6a",
+  "name" : "Попытка входа с неверным паролем",
+  "fullName" : "ru.yandex.praktikum.sprint7.tests.CourierLoginTest.cannotLoginWithWrongPassword",
+  "historyId" : "829b0c75ad6f8c24745b0470a4fbec12",
+  "time" : {
+    "start" : 1759861837554,
+    "stop" : 1759861838666,
+    "duration" : 1112
+  },
+  "description" : "Проверяем, что вход с неверным паролем возвращает ошибку 404",
+  "descriptionHtml" : "<p>Проверяем, что вход с неверным паролем возвращает ошибку 404</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "ru.yandex.praktikum.sprint7.tests"
+  }, {
+    "name" : "testClass",
+    "value" : "ru.yandex.praktikum.sprint7.tests.CourierLoginTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "cannotLoginWithWrongPassword"
+  }, {
+    "name" : "suite",
+    "value" : "ru.yandex.praktikum.sprint7.tests.CourierLoginTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-I5I9LF6"
+  }, {
+    "name" : "thread",
+    "value" : "19060@DESKTOP-I5I9LF6.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1d561f2e4a380f6a.json",
+  "parameterValues" : [ ]
+}

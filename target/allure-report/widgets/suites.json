@@ -1,0 +1,48 @@
+{
+  "total" : 4,
+  "items" : [ {
+    "uid" : "209314f8661c74d982b5568165cdc448",
+    "name" : "ru.yandex.praktikum.sprint7.tests.CreateOrderTest",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 4,
+      "unknown" : 0,
+      "total" : 4
+    }
+  }, {
+    "uid" : "ca3d9b422d3fddfd83f397a84309f0b8",
+    "name" : "ru.yandex.praktikum.sprint7.tests.CourierCreateTest",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 3,
+      "unknown" : 0,
+      "total" : 3
+    }
+  }, {
+    "uid" : "5d64686945b8b1e8945ac8133dbe6e39",
+    "name" : "ru.yandex.praktikum.sprint7.tests.CourierLoginTest",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 3,
+      "unknown" : 0,
+      "total" : 3
+    }
+  }, {
+    "uid" : "0b294f55d6187f890c113f88306556c7",
+    "name" : "ru.yandex.praktikum.sprint7.tests.OrdersListTest",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  } ]
+}

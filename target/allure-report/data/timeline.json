@@ -1,0 +1,145 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-I5I9LF6",
+    "children" : [ {
+      "name" : "19060@DESKTOP-I5I9LF6.main(1)",
+      "children" : [ {
+        "name" : "Успешный вход курьера",
+        "uid" : "69ecbffb300ef11d",
+        "parentUid" : "787a4d3f44f54a1b85d3e0c9015862e5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1759861836683,
+          "stop" : 1759861837552,
+          "duration" : 869
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Нельзя создать курьера без логина",
+        "uid" : "f663d5eb330b84ba",
+        "parentUid" : "787a4d3f44f54a1b85d3e0c9015862e5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1759861830797,
+          "stop" : 1759861833299,
+          "duration" : 2502
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "createOrderWithColors[Цвета заказа: [Ljava.lang.String;@39e53bef]",
+        "uid" : "ddf7e2a80708092a",
+        "parentUid" : "787a4d3f44f54a1b85d3e0c9015862e5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1759861838681,
+          "stop" : 1759861839306,
+          "duration" : 625
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "createOrderWithColors[Цвета заказа: [Ljava.lang.String;@5c313224]",
+        "uid" : "3870c6fda3779638",
+        "parentUid" : "787a4d3f44f54a1b85d3e0c9015862e5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1759861839310,
+          "stop" : 1759861839881,
+          "duration" : 571
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "getOrdersListSuccessfully",
+        "uid" : "22eee3527ae74537",
+        "parentUid" : "787a4d3f44f54a1b85d3e0c9015862e5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1759861841035,
+          "stop" : 1759861848484,
+          "duration" : 7449
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Нельзя создать курьера с уже существующим логином",
+        "uid" : "84112b3e06fc5bfe",
+        "parentUid" : "787a4d3f44f54a1b85d3e0c9015862e5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1759861833346,
+          "stop" : 1759861834675,
+          "duration" : 1329
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Создание нового курьера успешно",
+        "uid" : "786de501b1e81fcc",
+        "parentUid" : "787a4d3f44f54a1b85d3e0c9015862e5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1759861834679,
+          "stop" : 1759861835520,
+          "duration" : 841
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "createOrderWithColors[Цвета заказа: null]",
+        "uid" : "797688ef227bf139",
+        "parentUid" : "787a4d3f44f54a1b85d3e0c9015862e5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1759861840457,
+          "stop" : 1759861841032,
+          "duration" : 575
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Попытка входа с неверным логином",
+        "uid" : "3e972853d3e6d7f0",
+        "parentUid" : "787a4d3f44f54a1b85d3e0c9015862e5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1759861835525,
+          "stop" : 1759861836680,
+          "duration" : 1155
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Попытка входа с неверным паролем",
+        "uid" : "1d561f2e4a380f6a",
+        "parentUid" : "787a4d3f44f54a1b85d3e0c9015862e5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1759861837554,
+          "stop" : 1759861838666,
+          "duration" : 1112
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "createOrderWithColors[Цвета заказа: [Ljava.lang.String;@1e1e837d]",
+        "uid" : "51d997229a717190",
+        "parentUid" : "787a4d3f44f54a1b85d3e0c9015862e5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1759861839883,
+          "stop" : 1759861840455,
+          "duration" : 572
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "787a4d3f44f54a1b85d3e0c9015862e5"
+    } ],
+    "uid" : "64a2d3a4cfc7a15eb41175fa4154d6be"
+  } ]
+}
